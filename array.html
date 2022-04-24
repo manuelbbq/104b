@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+    <script>
+
+      function tuwas(){
+        console.log(this);
+        console.log("geht");
+
+        let arr = ['Peter', 'Ipek', "Thor", 'Hallo', 'Tersr'];
+        // arr[0] hat den Wert 'Peter'
+        // arr[1] hat den Wert 'Ipek'
+        // arr[2] hat den Wert 'Thor'
+          for (let i of arr) {
+              document.getElementById('anzeige').innerHTML += i + "<br>";
+          }
+
+
+      }
+
+    </script>
+</head>
+<body>
+<p id = 'anzeige'></p>
+<button onclick=tuwas()>tu was</button>
+</body>
+</html>

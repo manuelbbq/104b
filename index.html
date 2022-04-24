@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Übergabe mit POST</title>
+    <style>
+        label {
+            display: block;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<!--
+Erstelle Überschrift mit: Variablen mit POST Übergeben
+-->
+<h1>
+    Variablen mit POST übergeben
+</h1>
+
+<form action="empfangpost.php" method="get">
+    <label for="fname">Vorname </label>
+    <input type="text" id="fname" name="fname" value="Manuel"><br>
+    <label for="lname">Nachname</label>
+    <input type="text" id="lname" name="lname" value="Martinez"><br>
+    <label for="pass">Passwort</label>
+    <input type="password" id="pass" name="pass"><br>
+    <input type="submit" value="ab gehts">
+
+</form>
+</body>
+</html>

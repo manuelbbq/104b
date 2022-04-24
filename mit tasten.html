@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Rechner</title>
+    <script>
+        function writearry(z) {
+            var rechnung = [];
+
+            if (z === '+' || z==='-' || z === '*' || z === '/'){
+                rechnung.push(document.getElementById("z1").value)
+                rechnung.push(z)
+                console.log(rechnung)
+                document.getElementById("z1").value = ""
+            } else {
+                document.getElementById("z1").value += z
+
+            }
+           //
+
+        }
+
+        function addieren(k) {
+
+            let z1 = parseInt(document.getElementById("z1").value);
+           // let z2 = parseInt(document.getElementById('z2').value);
+            let e = 0
+
+            if (k === '+') {
+
+
+            } else if (k === '-'){
+                 e =  z1 - z2;
+            } else if (k === '*'){
+                e =  z1 - z2;
+            } else if (k === '*'){
+                e = z1 - z2;
+            }
+
+
+
+            alert('ende')
+            console.log("ende der Funktion")
+            document.getElementById('ergebnis').value = e;
+        }
+    </script>
+</head>
+<body>
+<label for="z1">Zahl1</label>
+<input type="text" id="z1" name="z1" value="" readonly><br>
+<!--<label for="z2">Zahl2</label>-->
+<!--<input type="text" id="z2" name="z2" value="22"><br>-->
+
+<button onclick="writearry('1')">1</button>
+<button onclick="writearry('2')">2</button>
+<button onclick="writearry('3')">3</button>
+<button onclick="writearry('4')">4</button>
+<button onclick="writearry('5')">5</button>
+<button onclick="writearry('6')">6</button>
+<button onclick="writearry('7')">7</button>
+<button onclick="writearry('8')">8</button>
+<button onclick="writearry('9')">9</button>
+<button onclick="writearry('0')">0</button>
+<br>
+
+<button onclick="writearry('+')">+</button>
+<button onclick="writearry('-')">-</button>
+<button onclick="writearry('*')">*</button>
+<button onclick="writearry('/')">/</button>
+<button onclick="calc()"> =</button>
+
+
+
+
+
+
+
+
+<br>
+<label for="ergebnis">Ergebnis</label>
+<input type="text" id="ergebnis" readonly><br>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schleifen</title>
+    <script>
+        function tuwas() {
+            let i = 0;
+            while (i*i<=10512) {
+
+                document.getElementById('text').innerHTML+='Die Quadratzahl von '+ i + ' ist ' + i*i + '<br> ';
+                i++;
+            }
+        }
+        function tuwasneues() {
+            let i = 0
+            do {
+                document.getElementById('text2').innerHTML += 'Die Quadratzahl von '+ i + ' ist ' + i*i + '<br> ';
+                i++
+            }
+            while (i*i<=10512)
+        }
+        function tuwas12(){
+            let i = 20;
+            while (i>=0){
+                if (i === 13){
+                } else {
+                    document.getElementById('drei').innerHTML += 'Etage ' + i + "<br>";
+                }
+                i--;
+            }
+        }
+
+        function tuwas4(){
+            for(let i =0; i< 4; i+=1){
+                console.log(i/10);
+            }
+        }
+    </script>
+</head>
+<body>
+
+<span>test</span> <span>te<span>sdf<br></span>st2</span><span>test3</span>
+<button onclick="tuwas()">while</button>
+<button onclick="tuwasneues()">do while</button>
+<button onclick="tuwas12()">13</button>
+<button onclick="tuwas4()">4</button>
+<br>
+<table>
+    <tr>
+        <th>while</th>
+        <th>dowhile</th>
+        <th>13</th>
+    </tr>
+    <tr>
+        <td valign=top><span id = 'text'></span></td>
+        <td valign=top><span id = 'text2'></span></td>
+        <td valign=top><span id = 'drei'></span></td>
+    </tr>
+</table>
+
+
+
+</body>
+</html>
