@@ -5,8 +5,8 @@
     <title>Title</title>
     <style>
         #container {
-            width: 400px;
-            height: 400px;
+            width: 800px;
+            height: 800px;
             position: relative;
             background: yellow;
             top: 0;
@@ -19,15 +19,24 @@
             background-color: red;
 
         }
+        #counter{
+            position: absolute ;
+            top: 200px;
+            left: 100px;
+            z-index: 1;
+            font-size: 70px;
+        }
     </style>
 
 </head>
 
 <body>
-
+<div id ="counter"> Round 1</div>
 <p><button onclick="myMove()">Click Me</button></p>
-<p><button onclick="myMove_func(350,350)">Click Me too</button></p>
-<p><button onclick="runcircle()">run circle</button></p>
+<p><button onclick="test()">Click Me too</button></p>
+<p><button onclick="async_func()">run circle</button></p>
+<p><button onclick="staubsauger()">sauger</button></p>
+<p><button onclick="staubsaugerx()">saugerx</button></p>
 
 <div id ="container">
     <div id ="animate"></div>
