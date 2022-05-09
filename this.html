@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this</title>
+    <style>
+        #aussen{
+            background-color: deepskyblue;
+            width: 5cm;
+            height: 3cm;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div id="aussen" style="z-index: 5; position: absolute" >
+    <div id="innen" style="z-index: 3; position: absolute" >
+    <button style="z-index: -1; position: relative" >Knopf 1</button>
+    <button style="z-index: 2; position: relative" >Knopf 2</button>
+    <button style="z-index: 3; position: relative" >Knopf 3</button>
+</div>
+</div>
+<p onclick="machewas()" >bin ein Abschnitt</p>
+<p onclick="machewas()" >bin auch ein Abschnitt</p>
+<script>
+    function machewas() {
+        console.log(this +" Abschnitt geclicked")
+    }
+    const array = document.getElementsByTagName('button');
+    for (const x of array) {
+        x.addEventListener('click', tuwas);
+    }
+    function tuwas() {
+        console.log(this.innerHTML)
+    }
+    document.getElementById('aussen').addEventListener("click", () => console.log('aussen',this))
+    document.getElementById('innen').addEventListener("click", () => console.log('innen',this))
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vier Farben</title>
+    <style>
+        body{
+            margin-top: 80px;
+            margin-left: 80px;
+            background-color: #3c194f;
+        }
+        #cont{
+            position: absolute;
+            width: 500px;
+            height: 500px;
+        }
+        .viereck{
+            width: 80px;
+            height: 80px;
+
+
+
+        }
+        #red{
+            background-color: red;
+
+        }
+        #blau{
+            background-color: blue;
+            
+
+
+        }
+        #gruen{
+            background-color: green;
+
+        }
+        #schwarz{
+            background-color: black;
+            margin-right: 30px;
+            top: 100px;
+            left: 100px;
+
+
+        }
+        #zblau{
+            background-color: blue;
+        }
+        #zgruen{
+            background-color: green;
+        }
+        #zred{
+            background-color: red;
+        }
+        #zblack{
+            background-color: black;
+            color: white;
+        }
+        span{
+            display: inline-block;
+            width: 220px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div id="cont">
+<div id="red" class ="viereck"></div>
+<div id="blau" class ="viereck"></div>
+<div id="gruen" class ="viereck"></div>
+<div id="schwarz" class ="viereck"></div>
+
+<div>
+    <span id="zblau">Blau wurde 0 mal gedrückt</span><br>
+    <span id="zgruen">Rot wurde 0 mal gedrückt</span><br>
+    <span id="zred">Grün wurde 0 mal gedrückt</span><br>
+    <span id="zblack">Schwarz wurde 0 mal gedrückt</span>
+</div>
+</div>
+<script>
+
+    const farbcount = varcount();
+    const div_ele = document.getElementsByTagName('div');
+    for (const divEleElement of div_ele) {
+        divEleElement.addEventListener('click',farbcount);
+    }
+    function varcount() {
+        let blau = 0;
+        let gruen = 0;
+        let red = 0;
+        let black = 0;
+
+        function count() {
+            let farbe = this.id;
+            if (farbe === 'blau') {
+                blau++;
+                document.getElementById("zblau").innerHTML = `Blau wurde ${blau} mal gedrückt`
+            }
+            if (farbe === 'red') {
+                red++;
+                document.getElementById("zred").innerHTML = `Rot wurde ${red} mal gedrückt`
+            }
+            if (farbe === 'gruen') {
+                gruen++;
+                document.getElementById("zgruen").innerHTML = `Grün wurde ${gruen} mal gedrückt`
+            }
+            if (farbe === 'schwarz') {
+                black++;
+                document.getElementById("zblack").innerHTML = `Schwarz wurde ${black} mal gedrückt`
+            }
+
+        }
+        return count;
+    }
+
+</script>
+</body>
+</html>

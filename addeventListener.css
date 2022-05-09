@@ -1,0 +1,23 @@
+#animate {
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+    top: 150px;
+    left:200px;
+    display: none;
+    text-align: center;
+
+}
+#aufgabe2{
+    display: none;
+}
+#aufgabe3{
+    display: none;
+}
+#linktoevent{
+    display: none;
+}
+body{
+    background-color: lightblue;
+}

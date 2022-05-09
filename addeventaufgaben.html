@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aufgaben</title>
+    <style>
+        td{
+            width: 30px;
+            height: 30px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        #unsichtbar{
+            display: none;
+        }
+        body{
+            margin-left: 100px;
+            background-color: deepskyblue;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<h1>Aufgabenen AddeventListener</h1>
+<div class="auf1" id="text" >Schreibe eine function die diesen Text löscht (id="text). Füge dem Button mit der id aufgabe_1 diese function mit einem "click" event hinzu.</div>
+<button id="aufgabe_1">Löschen</button>
+
+<div>Anschließend entferne den eventListener mit der removeEventListener und füge einen neuen hinzu der das style Attribut der class 2 auf 'block setzt</div>
+
+<br>
+<br>
+<div id="unsichtbar">
+<div class="auf2">Fügen allen td Elementen (class="farbe") in der unteren Tabelle einen event hinzu das sie bei einem Rechtsclick rotfärbt (backgroundColor) und ein weiteres das sie bei einem Doppelclick (dblclick) grün färbt. </div>
+
+<table class="auf2">
+    <tbody>
+    <tr>
+        <td class="farbe"></td>
+        <td class="farbe"></td>
+        <td class="farbe"></td>
+    </tr>
+    <tr>
+        <td class="farbe"></td>
+        <td class="farbe"></td>
+        <td class="farbe"></td>
+    </tr>
+    <tr>
+        <td class="farbe"></td>
+        <td class="farbe"></td>
+        <td class="farbe"></td>
+    </tr>
+
+    </tbody>
+
+</table>
+</div>
+<script>
+    document.getElementById('aufgabe_1').addEventListener('click',losch);
+    function losch(){
+        const text = document.getElementById('text');
+        text.innerHTML='';
+        document.getElementById('unsichtbar').style.display = 'block'
+    }
+    const td_ele = document.getElementsByClassName('farbe');
+    for (const tdEleElement of td_ele) {
+        tdEleElement.addEventListener('click',gogreen)
+        tdEleElement.addEventListener('dblclick', gored)
+    }
+    function gored(){
+        this.style.backgroundColor = 'red'
+    }
+    function gogreen(){
+        this.style.backgroundColor = 'green'
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+
+</head>
+<body>
+<div >
+    <button class="add">Knopf 1 add</button>
+    <button class="add">Knopf 2 add</button>
+</div>
+
+<div >
+    <button class="on" onclick="on_write(this)">Knopf 1 on</button>
+    <button class="on" onclick="on_write(this)">Knopf 2 on</button>
+</div>
+<div id="text"></div>
+<script>
+    const add_write= function (test){
+        document.getElementById("text").innerHTML = this.innerHTML
+        console.log(this);
+        console.log(test);
+    }
+
+    const butadd = document.getElementsByClassName("add")
+    for (const butaddElement of butadd) {
+        butaddElement.addEventListener('click',add_write.bind(butaddElement,'sdfsest'),false);
+    }
+function on_write(element){
+        document.getElementById("text").innerHTML = element.innerHTML
+}
+console.log(getComputedStyle(document.body))
+</script>
+</body>
+</html>

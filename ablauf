@@ -1,0 +1,76 @@
+zeige event in Browser
+
+entferne onclick
+
+schreibe
+            const button_1 = document.getElementById('aufgabe1');
+            button_1.addEventListener('click',arbeit)
+zeige event in browser
+
+add
+            button_1.addEventListener('click',show_aufgabe_2)
+
+zeige link
+
+add line bei line
+            function aufgabe_2(){
+                const gib_mir_Arbeit = document.getElementById('animate');
+                gib_mir_Arbeit.addEventListener('mouseover',arbeitsvermittlung);
+                gib_mir_Arbeit.addEventListener('mouseout', ich_bin_weg);
+                gib_mir_Arbeit.addEventListener('mouseout', show_aufgabe_3);
+
+            }
+add nerv
+            document.getElementById('aufgabe3').addEventListener('click', ich_nerve);
+
+entferne nerv
+            document.getElementById('aufgabe3').removeEventListener('click', ich_nerve);
+
+add delete_me and set it to button 3
+            function delete_me() {
+                this.remove()
+            }
+
+write schleife und add to nerv
+            function delte_all(){
+                const body_arry = document.body.children;
+                for (const bodyArryElement of body_arry) {
+                    bodyArryElement.addEventListener('mouseover',delete_me);
+                }
+            }
+class anzeige mwst einzelpreis onchange
+
+
+const button_1 = document.getElementById('aufgabe1');
+button_1.addEventListener('click',arbeit)
+button_1.addEventListener('click',show_aufgabe_2)
+
+const buttun_2 = document.getElementById("aufgabe2");
+buttun_2.addEventListener('click', aufgabe_2);
+document.getElementById('aufgabe3').addEventListener('click', ich_nerve);
+document.getElementById('aufgabe3').addEventListener('click', ich_nerve);
+function aufgabe_2(){
+    const gib_mir_Arbeit = document.getElementById('animate');
+    gib_mir_Arbeit.addEventListener('mouseover',arbeitsvermittlung);
+    gib_mir_Arbeit.addEventListener('mouseout', ich_bin_weg);
+    gib_mir_Arbeit.addEventListener('mouseout', show_aufgabe_3);
+
+}
+
+function ich_nerve() {
+    delete_all()
+}
+function delete_me() {
+    this.remove()
+}
+
+
+function delete_all(){
+    const body_arry = document.body.children;
+    for (const bodyArryElement of body_arry) {
+        bodyArryElement.addEventListener('mouseover',delete_me);
+    }
+}
+
+
+
