@@ -68,19 +68,156 @@
 //         const p2 = new Punkt(10, 10);
 //
 //         console.log(Punkt.laenge(p1, p2));
-class Tier {
-    constructor(tier) {
-        this.tier = tier;
-    }
-    sprich() {
-        return this.tier;
-    }
-
-}
-
-const obj = new Tier('lowe');
-// let sprich = obj.sprich;
-console.log(obj.sprich()); // undefined
+// class Tier {
+//     constructor(tier) {
+//         this.tier = tier;
+//     }
+//     sprich() {
+//         return this.tier;
+//     }
+//
+// }
+//
+// const obj = new Tier('lowe');
+// // let sprich = obj.sprich;
+// console.log(obj.sprich()); // undefined
 
 // let iss = Tier.iss;
 // console.log(iss()); // undefined
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// class Zaehler{
+//      static count = 0;
+//     constructor( max_count) {
+//         // this.count = count;
+//         this.max_count = max_count
+//
+//     }
+//     zaehlen(zahl){
+//         if (Zaehler.count+zahl > this.max_count){
+//             document.getElementById('abc').innerHTML = 'to many people';
+//         } else {
+//             Zaehler.count += zahl
+//             document.getElementById('abc').innerHTML =`${Zaehler.count} people are in. (max. people ${this.max_count})`;
+//         }
+//     }
+// }
+// const zaehler1 = new Zaehler(10);
+// const zaehler2 = new Zaehler(10);
+// document.getElementById('but').addEventListener('click', ()=>{zaehler1.zaehlen(1)})
+// document.getElementById('but2').addEventListener('click', ()=>{zaehler2.zaehlen(parseInt(document.getElementById('num').value));
+// counterp2()});
+// function counterp1(){
+//     zaehler1.zaehlen(1);
+// }
+// function counterp2(){
+//     document.getElementById('num').value = 0;
+// }
+//
+// class Boy_cars{
+//     static count = 0;
+//     name;
+//     ps;
+//     color;
+//
+//
+//     constructor(name, ps, color) {
+//         if(Boy_cars.count >= 4){
+//             console.log('Boy u have to many cars')
+//         } else {
+//             this.name = name;
+//             this.ps = ps;
+//             this.color = color;
+//             Boy_cars.count++
+//         }
+//     }
+//     static test(){
+//         console.log(this)
+//     }
+// }
+// const cars = [];
+// cars.push(new Boy_cars('Porsche',200,'green'));
+// // cars.push(new Boy_cars('VW',75,'black'));
+// // cars.push(new Boy_cars('BMW',120,'blue'));
+// // cars.push(new Boy_cars('Ente',25,'red'));
+// function new_car() {
+//     cars.push(new Boy_cars('audi',100,'black'))
+// }
+// document.getElementById('but3').addEventListener('click',new_car)
+//
+//
+//
+//
+// class Schulleiter {
+//     fname;
+//     lname;
+//     static obj;
+//
+//     constructor(fname, lname) {
+//         if (Schulleiter.obj === undefined){
+//
+//         this.fname = fname;
+//         this.lname = lname;
+//         Schulleiter.obj = this;
+//         console.log('Der Eine')
+//         } else {
+//             console.log('Es kann nur einen geben');
+//         }
+//     }
+// }
+// let schulleiter ;
+// function create_schulleiter(fname, lname){
+//     schulleiter = new Schulleiter(fname,lname)
+//
+// }
+// document.getElementById('but4').addEventListener('click',()=>{create_schulleiter('hans','hansson')});
+//
+
+const arr = [2,4,6];
+arr[4]= 8;
+const obj = {
+    fname : 'peter',
+    lname : 'pan'
+}
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i])
+}
+for (const number of arr) {
+    console.log(number)
+}
+for (const arrKey in arr) {
+    console.log(arr[arrKey])
+}
+
+const  html = document.body.children;
+console.log('html ',html.length)
+for (const objKey in arr) {
+    console.log(objKey);
+}
+console.log('_________________________________')
+let td_gesamt = 0;
+for (const td of document.getElementsByTagName('td')) {
+    // console.log(Number(td.innerHTML))
+    td_gesamt += Number(td.innerHTML)
+    td.addEventListener('click',()=>{console.log(td.innerHTML)})
+}
+console.log(td_gesamt)
+
+
+
+
+
+
+
+
